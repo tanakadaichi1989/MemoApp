@@ -14,6 +14,10 @@
 		A10E378527D304A00063FBFB /* MemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10E378427D304A00063FBFB /* MemoAppTests.swift */; };
 		A10E378F27D304A00063FBFB /* MemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10E378E27D304A00063FBFB /* MemoAppUITests.swift */; };
 		A10E379127D304A00063FBFB /* MemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10E379027D304A00063FBFB /* MemoAppUITestsLaunchTests.swift */; };
+		A10E379F27D305F20063FBFB /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = A10E379E27D305F20063FBFB /* Realm */; };
+		A10E37A127D305F20063FBFB /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A10E37A027D305F20063FBFB /* RealmSwift */; };
+		A10E37A327D309310063FBFB /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10E37A227D309310063FBFB /* Memo.swift */; };
+		A10E37A527D30ADF0063FBFB /* MemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10E37A427D30ADF0063FBFB /* MemoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,8 @@
 		A10E378A27D304A00063FBFB /* MemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10E378E27D304A00063FBFB /* MemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoAppUITests.swift; sourceTree = "<group>"; };
 		A10E379027D304A00063FBFB /* MemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A10E37A227D309310063FBFB /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		A10E37A427D30ADF0063FBFB /* MemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10E37A127D305F20063FBFB /* RealmSwift in Frameworks */,
+				A10E379F27D305F20063FBFB /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				A10E377327D3049F0063FBFB /* MemoAppApp.swift */,
+				A10E37A227D309310063FBFB /* Memo.swift */,
+				A10E37A427D30ADF0063FBFB /* MemoViewModel.swift */,
 				A10E377527D3049F0063FBFB /* ContentView.swift */,
 				A10E377727D304A00063FBFB /* Assets.xcassets */,
 				A10E377927D304A00063FBFB /* Preview Content */,
@@ -143,6 +153,10 @@
 			dependencies = (
 			);
 			name = MemoApp;
+			packageProductDependencies = (
+				A10E379E27D305F20063FBFB /* Realm */,
+				A10E37A027D305F20063FBFB /* RealmSwift */,
+			);
 			productName = MemoApp;
 			productReference = A10E377027D3049F0063FBFB /* MemoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,9 @@
 				Base,
 			);
 			mainGroup = A10E376727D3049F0063FBFB;
+			packageReferences = (
+				A10E379D27D305F20063FBFB /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = A10E377127D3049F0063FBFB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10E37A527D30ADF0063FBFB /* MemoViewModel.swift in Sources */,
+				A10E37A327D309310063FBFB /* Memo.swift in Sources */,
 				A10E377627D3049F0063FBFB /* ContentView.swift in Sources */,
 				A10E377427D3049F0063FBFB /* MemoAppApp.swift in Sources */,
 			);
@@ -585,6 +604,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A10E379D27D305F20063FBFB /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A10E379E27D305F20063FBFB /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A10E379D27D305F20063FBFB /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		A10E37A027D305F20063FBFB /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A10E379D27D305F20063FBFB /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A10E376827D3049F0063FBFB /* Project object */;
 }
